@@ -6,14 +6,6 @@ import { useState } from 'react';
 
 const Form = (props) => {
 
-    const teams = [
-        'TI, Developer & Suport',
-        'MIS, Finantial & BI',
-        'Project',
-        'Others Teams',
-        'Departments'
-    ]
-
     const [name, setName] = useState('');
     const [occupation, setOccupation] = useState('');
     const [image, setImage] = useState('');
@@ -22,6 +14,10 @@ const Form = (props) => {
     const saveForm = (event) => {
         event.preventDefault();
         props.whenNewColaborator({name, occupation, image, team})
+        setName('');
+        setOccupation('');
+        setImage('');
+        setTeam('');
     }
 
     return (
@@ -51,7 +47,7 @@ const Form = (props) => {
                 <SelectOption 
                     label="Team" 
                     required={true} 
-                    itens={teams}
+                    itens={props.teams}
                     value={team}
                     whenChanged={value => setTeam(value)} />
                 <Button>Create Card</Button>
