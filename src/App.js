@@ -8,7 +8,7 @@ function App() {
 
   const teams = [
     {
-      name: 'TI (Developer & Suport)',
+      name: 'TI',
       primaryColor: '#57C278',
       secondaryColor: '#D9F7E9'
     },
@@ -23,22 +23,22 @@ function App() {
       secondaryColor: '#F0F8E2'
     },
     {
-      name: 'Others Teams',
+      name: 'Commercial Manager',
       primaryColor: '#E06869',
       secondaryColor: '#FDE7E8'
     },
     {
-      name: 'Outsourced',
+      name: 'Superintendent',
       primaryColor: '#DB6EBF',
       secondaryColor: '#FAE9FS'
     },
     {
-      name: 'Departments',
+      name: 'Director',
       primaryColor: '#FFBA05',
       secondaryColor: '#FFF5D9'
     },
     {
-      name: 'Friends',
+      name: 'Outsourced',
       primaryColor: '#FF8A29',
       secondaryColor: '#FFEEDF'
     }
@@ -48,7 +48,7 @@ function App() {
 
   const whenNewColaboratorRegistered = (colaborator) => {
     console.log(colaborator);
-    // colaborators.push(colaborator);
+    debugger;
     setColaborators([...colaborators, colaborator]);
   }
 

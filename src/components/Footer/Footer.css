@@ -1,4 +1,4 @@
-.footer {
+.footerPage {
     background: #6278F7;
     color: #FFF;
     padding: 80px;
@@ -7,11 +7,20 @@
     align-items: center;
 }
 
-.footer ul li {
+.footerPage ul li {
     display: inline-block;
     margin-right: 32px;
 }
 
-.footer ul li:last-child {
+.footerPage ul li:last-child {
     margin-right: 0;
+}
+
+.footerPage p {
+    font-size: 26px;
+    color: #FFF;
+}
+
+.footerPage a:hover {
+    color: rgb(252, 252, 5);
 }

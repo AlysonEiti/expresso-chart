@@ -2,22 +2,22 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <footer className="footer">
+        <footer className="footerPage">
             <section>
                 <ul>
                     <li>
-                        <a href="facebook.com" target="_blank">
-                            <img src="/images/facebook.png" alt="" />
+                        <a href="https://www.linkedin.com/in/alyson-eiti" target="_blank" rel="noreferrer">
+                            <img src="/images/linkedin.png" alt="Linkedin" />
                         </a>
                     </li>
                     <li>
-                        <a href="twitter.com" target="_blank">
-                            <img src="/images/twitter.png" alt="" />
+                        <a href="https://github.com/AlysonEiti" target="_blank" rel="noreferrer">
+                            <img src="/images/github.png" alt="GitHub" />
                         </a>
                     </li>
                     <li>
-                        <a href="instagram.com" target="_blank">
-                            <img src="/images/instagram.png" alt="" />
+                        <a href="https://www.instagram.com/alyson.eiti" target="_blank" rel="noreferrer">
+                            <img src="/images/instagram.png" alt="Instagram" />
                         </a>
                     </li>
                 </ul>
@@ -27,7 +27,7 @@ const Footer = () => {
             </section>
             <section>
                 <p>
-                    Powered by Alyson Eiti
+                    Powered by <a href="https://www.linkedin.com/in/alyson-eiti" target="_blank" rel="noreferrer">Alyson Eiti</a>
                 </p>
             </section>
         </footer>
