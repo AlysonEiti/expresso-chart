@@ -6,43 +6,36 @@ import Team from './components/Team/Team';
 
 function App() {
 
-  const teams = [
+  const [teams, setTeams] = useState([
     {
       name: 'Software Developer',
-      primaryColor: '#57C278',
-      secondaryColor: '#D9F7E9'
+      color: '#57C278'
     },
     {
-      name: 'Data Scients',
-      primaryColor: '#82CFFA',
-      secondaryColor: '#E8F8FF'
+      name: 'Data Scientist',
+      color: '#82CFFA'
     },
     {
       name: 'Mobile',
-      primaryColor: '#A60157',
-      secondaryColor: '#F0F8E2'
+      color: '#FFBA05'
     },
     {
       name: 'Operations Analyst',
-      primaryColor: '#E06869',
-      secondaryColor: '#FDE7E8'
+      color: '#E06869'
     },
     {
       name: 'Project Managers',
-      primaryColor: '#DB6EBF',
-      secondaryColor: '#FAE9FS'
+      color: '#DB6EBF'
     },
     {
       name: 'Marketing, UX & Design',
-      primaryColor: '#FFBA05',
-      secondaryColor: '#FFF5D9'
+      color: '#A60157'
     },
     {
       name: 'Others',
-      primaryColor: '#FF8A29',
-      secondaryColor: '#FFEEDF'
+      color: '#FF8A29',
     }
-  ]
+  ]);
 
   const initial = [
     {
@@ -149,6 +142,15 @@ function App() {
     console.log('Removing colaborator...');
   }
 
+  function changeTeamColor(color, name) {
+    setTeams(teams.map(team => {
+      if(team.name == name) {
+        team.color = color;
+      }
+      return team;
+    }))
+  }
+
   return (
     <div className="App">
       <Banner />
@@ -157,10 +159,10 @@ function App() {
         <Team 
           key={team.name} 
           name={team.name} 
-          primaryColor={team.primaryColor} 
-          secondaryColor={team.secondaryColor}
+          color={team.color}
           colaborators={colaborators.filter(colaborator => colaborator.team === team.name)}  
           whenDelete={deleteColaborator} 
+          changeColor={changeTeamColor}
         />)
       }
       <Footer />
