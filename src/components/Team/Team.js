@@ -8,12 +8,18 @@ const Team = (props) => {
     return (
         (props.colaborators.length > 0) ? 
         <section className="team" style={css}>
-            <input value={props.color} type="color" className="input-color" onChange={event => props.changeColor(event.target.value, props.name)}/>
+            <input value={props.color} type="color" className="input-color" onChange={event => props.changeColor(event.target.value, props.id)}/>
             <h3 style={{ borderColor: props.color  }}>{props.name}</h3>
             <div className="colaborators">
                 {props.colaborators.map( colaborator => {
                     return (
-                        <Colaborator backgroundColor={props.color} key={colaborator.name} name={colaborator.name} occupation={colaborator.occupation} image={colaborator.image} whenDelete={props.whenDelete}/>
+                        <Colaborator 
+                            backgroundColor={props.color} 
+                            colaborator={colaborator}
+                            key={colaborator.name} 
+                            whenDelete={props.whenDelete} 
+                            whenFavorite={props.whenFavorite}
+                        />
                     )
                 }) }
             </div>
